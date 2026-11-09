@@ -49,4 +49,4 @@ See the **[future enhancements backlog](docs/roadmap.md)** for ideas such as ene
 
 Copyright © 2026 Mark Wilson. Released under the **[MIT Licence](LICENSE)**. Journey Atlas is an independent, unofficial project, not affiliated with or endorsed by Škoda Auto.
 
-Built using [Leaflet](https://leafletjs.com/), [OpenStreetMap](https://www.openstreetmap.org/) data and [OSRM](https://project-osrm.org/) routing. Their respective licences and usage terms apply. Created with the assistance of [ChatGPT](https://chatgpt.com/). Škoda and MyŠkoda are trademarks of their respective owners.
+Built using [Leaflet](https://leafletjs.com/), [MapLibre GL JS](https://maplibre.org/), [OpenFreeMap](https://openfreemap.org/) maps based on [OpenStreetMap](https://www.openstreetmap.org/) data, and [OSRM](https://project-osrm.org/) routing. Their respective licences and usage terms apply. Created with the assistance of [ChatGPT](https://chatgpt.com/). Škoda and MyŠkoda are trademarks of their respective owners.

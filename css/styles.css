@@ -1,0 +1,182 @@
+
+:root{--green:#78fa8b;--dark:#092b20;--deep:#061c17;--ink:#e8f7ed;--muted:#a4bfb3;--line:#2a5040}*{box-sizing:border-box}body{margin:0;background:var(--deep);color:var(--ink);font:14px system-ui,-apple-system,sans-serif}header{padding:17px 22px;background:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line)}h1{font-size:23px;margin:0;letter-spacing:-.5px}h1 span{color:var(--green)}button,.filebutton{border:1px solid #47745b;background:#173e2c;color:#ecfff0;padding:9px 12px;border-radius:8px;cursor:pointer;font:inherit}button:hover,.filebutton:hover{border-color:var(--green)}button.primary{background:var(--green);color:#092b20;font-weight:700;border-color:var(--green)}button:disabled{opacity:.4;cursor:default}.layout{display:grid;grid-template-columns:365px minmax(0,1fr);height:calc(100vh - 77px);min-height:500px}aside{overflow:auto;background:#0d2b21;border-right:1px solid var(--line)}main{position:relative;min-height:400px}#map{height:100%;width:100%;background:#dce5dd}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px}.stat.clickable{cursor:pointer}.stat.clickable:hover,.stat.clickable.active{outline:2px solid var(--green);outline-offset:-2px}.itinerary{display:grid;gap:6px}.itrow{display:grid;grid-template-columns:1fr auto auto auto;gap:5px;align-items:center;padding:7px;border:1px solid #345c46;border-radius:7px}.itrow small{color:var(--muted);display:block}.itrow select{padding:8px 28px 8px 10px;min-width:105px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23e8f7ed' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center}.itrow button{padding:5px 8px}.stat{background:#173b2b;border-radius:10px;padding:12px}.stat strong{font-size:22px;display:block;color:var(--green)}.stat small{color:var(--muted)}.filters{padding:0 16px 12px}.filters input{width:100%}.trip{padding:13px 16px;border-top:1px solid var(--line);cursor:pointer}.trip:hover,.trip.active{background:#1a4330}.trip.active{border-left:4px solid var(--green);padding-left:12px}.trip .top{display:flex;justify-content:space-between;gap:10px}.trip .name{font-weight:650}.sub,.hint{color:var(--muted);font-size:12px;margin-top:5px}.pill{font-size:11px;border-radius:30px;background:#31513b;padding:3px 7px;white-space:nowrap}.pill.warn{background:#735329;color:#ffe2a4}.toolbar{position:absolute;top:12px;right:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap}.toolbar button{background:#fff;color:#143624;border-color:#cbd8cd}.panel{position:absolute;z-index:600;left:12px;top:60px;width:min(420px,calc(100% - 24px));max-height:calc(100% - 74px);overflow:auto;background:#0d2b21;border:1px solid #436c50;border-radius:13px;box-shadow:0 12px 40px #0007;padding:17px;display:none}.panel.open{display:block}.panel{background:#303b39;border-color:#667773}.panel .note{background:#394c45}.panel input,.panel textarea,.panel select{background:#253a33;border-color:#72877c}.panel .itrow{border-color:#72877c;background:#34453e}.panel h2{font-size:18px;margin:0}.panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.panel-header #closeBtn{width:32px;height:32px;min-width:32px;padding:0;display:grid;place-items:center;font-size:23px;line-height:1;border-radius:8px}.trip .top{align-items:center}.trip .trip-edit{padding:4px 9px;font-size:12px;white-space:nowrap}.trip .trip-meta{display:flex;align-items:center;gap:7px}.legend{display:grid;gap:5px;max-width:230px}.legend .legend-row{display:flex;align-items:center;gap:9px;line-height:1.25}.legend .legend-symbol{width:19px;min-width:19px;display:flex;justify-content:center;align-items:center}.legend .legend-help{font-size:11px;color:#777;line-height:1.3;margin-top:2px;white-space:nowrap}.legend{max-width:none}.field{margin:11px 0}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}input,textarea,select{background:#173b2b;border:1px solid #47745b;color:var(--ink);border-radius:7px;padding:9px;font:inherit;width:100%}textarea{min-height:65px;resize:vertical}.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.note{background:#1d422e;padding:10px;border-radius:8px;color:#cce5d3;font-size:12px;line-height:1.5}.leaflet-popup-content{line-height:1.5}.leaflet-popup-content strong{color:#173e2c}.leaflet-container{font:inherit}.point{background:#78fa8b;border:2px solid #0a3828;border-radius:50%;width:12px;height:12px}.legend{position:absolute;bottom:25px;left:12px;z-index:500;background:#fff;padding:10px 12px;border-radius:8px;color:#163c28;font-size:12px;box-shadow:0 2px 10px #0002}.swatch{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:5px}.footer{padding:10px 16px;font-size:11px;color:var(--muted)}@media(max-width:750px){.layout{grid-template-columns:1fr;grid-template-rows:42vh 1fr;height:auto}main{grid-row:1}aside{grid-row:2;max-height:none}.panel{top:55px;max-height:calc(100% - 60px)}header{padding:12px}h1{font-size:19px}}
+
+/* Dock the editor in the left column rather than over the map. */
+.layout{grid-template-columns:minmax(365px,420px) minmax(0,1fr)}
+aside{display:flex;flex-direction:column}
+.panel,.panel.open{position:static;display:none;width:auto;max-height:none;overflow:visible;border-radius:0;box-shadow:none;border-left:0;border-right:0;padding:15px;margin:0}
+.panel.open{display:block}.panel{background:#303b39;border-color:#667773}.panel .note{background:#394c45}.panel input,.panel textarea,.panel select{background:#253a33;border-color:#72877c}.panel .itrow{border-color:#72877c;background:#34453e}
+#trips{flex:none}
+@media(max-width:750px){.layout{grid-template-columns:1fr}.panel{max-height:none}}
+ .location-marker,.legend-dot{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:16px;height:16px;border:2px solid #123c2b;border-radius:50%;background:#78fa8b;color:#08291e}
+.location-marker.charging,.legend-dot.charging{font-size:12px;line-height:1}
+.legend-dot.recorded{background:#16452d}
+.legend .legend-symbol{width:20px;min-width:20px}
+.analysis,.selected-details{margin:10px 0;padding:12px;background:#203e33;border:1px solid #52705f;border-radius:9px}.analysis h3,.selected-details h3{margin:0 0 10px;font-size:14px}.analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.analysis-grid strong{font-size:21px;display:block;color:#78fa8b}.analysis-grid small{font-size:11px;color:#c3d7ca}.analysis-note{font-size:11px;color:#c3d7ca;margin-top:9px}.selected-details{margin:8px 14px 12px}.selected-details button{margin-top:10px}
+ 
+/* Native select indicators were hidden by appearance:none; restore an explicit, high-contrast chevron. */
+select{appearance:none;-webkit-appearance:none;padding-right:38px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2378fa8b' stroke-width='2.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 12px center!important;background-size:18px!important}
+.itrow select{padding-right:38px!important;min-width:125px}
+.import-report{margin:0 16px 12px;padding:12px;background:#1b4434;border:1px solid #47745b;border-radius:9px;line-height:1.5}
+.import-report[hidden]{display:none}
+.import-report strong{color:var(--green)}
+
+/* v0.19 import review */
+.import-overlay{position:fixed;inset:0;z-index:4000;background:#00180fbd;display:flex;align-items:center;justify-content:center;padding:20px}
+.import-overlay[hidden]{display:none}
+.import-dialog{background:#102f24;color:#effaf2;border:1px solid #547b65;border-radius:16px;max-width:850px;width:100%;max-height:88vh;overflow:auto;padding:22px;box-shadow:0 12px 50px #0008}
+.import-dialog h2{margin:0 0 8px}.import-summary{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.import-summary span{background:#204938;border-radius:8px;padding:9px 13px}
+.import-entry{border:1px solid #557565;border-radius:9px;padding:12px;margin:10px 0}.import-entry summary{cursor:pointer;font-weight:650}.import-entry p{margin:6px 0;color:#c0d7ca;font-size:13px}
+.import-dialog table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}.import-dialog td,.import-dialog th{border-bottom:1px solid #456554;padding:7px;overflow-wrap:anywhere;text-align:left}
+.import-dialog select{max-width:100%;min-width:190px}.import-dialog .actions{justify-content:flex-end;margin-top:16px}
+.import-dialog button:focus-visible,.import-dialog select:focus-visible{outline:2px solid #78fa8b;outline-offset:2px}
+.import-warning{background:#4a3724;border-radius:7px;padding:10px;margin-top:12px;color:#fff0d8}
+
+/* v0.19: readable import history and review dialog */
+.import-report{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.import-file-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:12px;margin-top:5px}
+.import-dialog{overflow-wrap:anywhere}
+.import-entry summary{list-style-position:inside}
+.import-entry summary::marker{color:var(--green)}
+.import-warning{line-height:1.5}
+.import-file-info{overflow-wrap:anywhere}
+.trip .trip-meta{flex-shrink:0}
+.pill.incomplete{background:#624b29;color:#ffe2a4}
+
+/* v0.19: restore review and unambiguous import actions */
+.restore-dialog{max-width:560px}
+.restore-comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.restore-comparison>div{background:#204938;padding:14px;border-radius:9px}
+.restore-comparison strong{display:block;font-size:25px;color:var(--green)}
+.restore-comparison small{color:var(--muted)}
+.restore-warning{background:#4a3724;color:#fff0d8;border-radius:8px;padding:12px;line-height:1.5}
+.import-action-label{display:block;margin:12px 0 5px;font-size:12px;color:var(--muted)}
+.import-fixed-action{padding:9px 12px;border:1px solid #47745b;border-radius:7px;background:#173b2b;color:#d6e9dc}
+@media(max-width:520px){.restore-comparison{grid-template-columns:1fr}}
+
+/* v0.19.3 — visual consistency, without changing journey behaviour */
+.panel #editorAnalysis.analysis{
+ background:#394642;
+ border-color:#74857d;
+ margin:14px 0 18px;
+}
+.panel input[type="datetime-local"]::-webkit-calendar-picker-indicator{
+ filter:invert(1) brightness(1.35);
+ opacity:.9;
+ cursor:pointer;
+}
+.panel input[type="datetime-local"]{color-scheme:dark}
+/* A consistent 12px rhythm between sidebar sections. */
+aside .stats{padding:16px 16px 12px}
+aside .import-report{margin:0 16px 12px}
+aside .filters{padding:0 16px 12px}
+aside .selected-details{margin:0 16px 12px}
+aside .trip:first-child{border-top:1px solid var(--line)}
+header .actions .filebutton,header .actions #exportBtn{
+ background:#173e2c;color:#ecfff0;border:1px solid #47745b;
+ font-weight:400;
+}
+header .actions .filebutton:hover,header .actions #exportBtn:hover{border-color:var(--green)}
+
+/* v0.19.3: grey editing workspace; normal atlas remains Škoda green. */
+.panel{background:#303b39;border-color:#667773}
+.panel #original.note,.panel .note{background:#3b4643;color:#d5e0db}
+.panel #editorAnalysis.analysis{background:#3b4643;border-color:#73817c}
+.panel #editorAnalysis .analysis-grid strong{color:#f1f6f3}
+.panel .itrow{background:#3b4643;border-color:#73817c}
+.panel .itrow small{color:#bccbc4}
+/* Only actual controls use the muted green treatment. */
+.panel input,.panel textarea,.panel select{background:#213c32;border:1px solid #648174;color:#eef8f1}
+.panel button{background:#1c4432;border:1px solid #4e7960;color:#eef8f1;font-weight:400}
+.panel button.primary{background:#24513a;border:2px solid #78fa8b;color:#f3fff5;font-weight:600}
+.panel button:hover:not(:disabled),.panel button:focus-visible:not(:disabled){background:#78fa8b;border-color:#78fa8b;color:#092b20;outline:none}
+.panel input:focus,.panel textarea:focus,.panel select:focus{outline:2px solid #78fa8b;outline-offset:1px}
+.panel .itrow select{background-color:#213c32}
+/* Neutral chevrons and dates; avoid fluorescent decoration. */
+.panel select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23c3d0c9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important}
+.panel input[type="datetime-local"]::-webkit-calendar-picker-indicator{filter:invert(1) grayscale(1) brightness(1.15);opacity:.85}
+/* Saving is an action, not a selected editing mode. */
+.panel #saveBtn.primary{background:#1c4432;border:1px solid #4e7960;color:#eef8f1;font-weight:400}
+.panel #saveBtn.primary:hover,.panel #saveBtn.primary:focus-visible{background:#78fa8b;border-color:#78fa8b;color:#092b20}
+.panel button:disabled{opacity:.38}
+
+/* v0.19.3 — consistent editor layout, surfaces and help text */
+.panel{--edit-surface:#3b4643;--edit-border:#73817c;--edit-gap:16px;min-width:0}
+.panel *, .panel *::before, .panel *::after{box-sizing:border-box}
+.panel .pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0;width:100%}
+.panel .pair>.field{min-width:0}
+.panel .field input,.panel .field select,.panel .field textarea{display:block;min-width:0;max-width:100%;width:100%}
+.panel input[type="datetime-local"]{min-width:0;width:100%;padding-right:9px;font-size:inherit}
+.panel input[type="datetime-local"]::-webkit-calendar-picker-indicator{flex-shrink:0;margin-left:2px;cursor:pointer}
+.panel #original.note,.panel #editorAnalysis.analysis{background:var(--edit-surface);border:1px solid var(--edit-border);border-radius:9px;padding:12px;margin:0 0 var(--edit-gap);color:#d5e0db;max-width:100%;overflow-wrap:anywhere}
+.panel #editorAnalysis .analysis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.panel #editorAnalysis .analysis-grid>div{min-width:0}
+.panel .itrow{min-width:0;max-width:100%;grid-template-columns:minmax(0,1fr) auto auto auto}
+.panel .itrow>div:first-child{min-width:0;overflow-wrap:anywhere}
+.panel .itrow select{width:auto;max-width:100%}
+.panel .field{margin:0 0 var(--edit-gap);min-width:0}
+.panel .pair{margin-bottom:var(--edit-gap)}
+.panel .pair .field{margin:0}
+.panel .hint{line-height:1.45;overflow-wrap:anywhere}
+.panel .pair+.hint{margin:0 0 var(--edit-gap)}
+.panel .editor-guidance{margin:0 0 var(--edit-gap);padding:0;background:none;border:0;color:var(--muted)}
+.panel .field>.hint{margin-top:8px}
+.panel .actions{align-items:flex-start}
+@media(max-width:440px){.panel .pair{grid-template-columns:minmax(0,1fr)}.panel .itrow{grid-template-columns:minmax(0,1fr) auto;row-gap:8px}}
+
+/* v0.19.3 — consistent interactive states and accessible in-app dialogues */
+.panel button:hover:not(:disabled),.panel #saveBtn.primary:hover:not(:disabled){background:#1c4432;color:#eef8f1;border-color:var(--green)}
+.panel button.primary:hover:not(:disabled){background:#24513a;color:#f3fff5;border-color:var(--green)}
+.panel button:focus-visible:not(:disabled){outline:2px solid var(--green);outline-offset:3px;background:inherit;color:inherit}
+.panel #saveBtn.primary:focus-visible{background:#1c4432;color:#eef8f1}
+.panel button.primary{border:2px solid var(--green)}
+.panel #saveBtn.primary{border:1px solid #4e7960}
+.panel button:disabled:hover{border-color:#4e7960;background:#1c4432;color:#eef8f1}
+.atlas-dialog{max-width:520px}
+.atlas-dialog p{line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.atlas-dialog .actions{justify-content:flex-end}
+.atlas-dialog button.primary{background:#173e2c;color:#ecfff0;border:1px solid #47745b;font-weight:400}
+.atlas-dialog button:hover{border-color:var(--green);background:#173e2c;color:#ecfff0}
+.atlas-dialog button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.atlas-dialog button.danger{border-color:#ad7957}
+
+
+/* v0.20.2 — shared action states across navigation, editor and dialogues.
+   Only an active editing mode receives the strong green selection border. */
+:root{--action-bg:#173e2c;--action-border:#47745b;--action-text:#ecfff0;--action-warning:#ad7957}
+header .actions button,
+header .actions .filebutton,
+.import-dialog button,
+.atlas-dialog button,
+.panel button:not(.primary),
+.panel #saveBtn.primary{
+ background:var(--action-bg);
+ border:1px solid var(--action-border);
+ color:var(--action-text);
+ font-weight:400;
+}
+header .actions button:hover:not(:disabled),
+header .actions .filebutton:hover,
+.import-dialog button:hover:not(:disabled),
+.atlas-dialog button:hover:not(:disabled),
+.panel button:not(.primary):hover:not(:disabled),
+.panel #saveBtn.primary:hover:not(:disabled){
+ background:var(--action-bg);
+ border-color:var(--green);
+ color:var(--action-text);
+}
+/* The editor's selected tool is a state, not a generic primary action. */
+.panel button.primary:not(#saveBtn){background:#24513a;border:2px solid var(--green);color:#f3fff5;font-weight:600}
+.panel button.primary:not(#saveBtn):hover:not(:disabled){background:#24513a;border-color:var(--green);color:#f3fff5}
+/* Restore and delete are both destructive; amber is a warning accent, not a fill. */
+#importOverlay button.primary{border-color:var(--action-border)}
+#restoreConfirm,
+.atlas-dialog button.danger{border-color:var(--action-warning)}
+#restoreConfirm:hover:not(:disabled),
+.atlas-dialog button.danger:hover:not(:disabled){border-color:#e5a36e}
+header .actions button:focus-visible,
+header .actions .filebutton:focus-within,
+.import-dialog button:focus-visible,
+.atlas-dialog button:focus-visible,
+.panel button:focus-visible:not(:disabled){outline:2px solid var(--green);outline-offset:3px}
+button:disabled:hover{cursor:default}

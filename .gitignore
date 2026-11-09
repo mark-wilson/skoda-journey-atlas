@@ -1,0 +1,7 @@
+# Personal journey exports and backups
+*.csv
+*.json
+*tripStatistics*
+
+# macOS Finder metadata
+.DS_Store

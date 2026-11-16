@@ -48,6 +48,7 @@ Read `README.md`, `docs/user-guide.md`, `docs/release-notes.md` and `docs/roadma
 - Test the affected behaviour and relevant regressions. State clearly which checks were run and which could not be run.
 - Never describe a change as tested merely because the code was inspected.
 - Update user-facing documentation when functionality or behaviour changes. Do not change release numbers, release notes or roadmap commitments unless requested.
+- Maintain `CHANGELOG.md`: add a concise, user-relevant entry under `Unreleased` for each bug fix, feature or behavioural change. Do not list changes as released until the repository owner approves a release; preserve existing release history and do not invent dates or versions.
 
 ## GitHub workflow
 
